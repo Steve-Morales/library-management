@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.library_management.entity.Book;
 import com.library_management.service.BookService;
 
+@CrossOrigin(maxAge = 3360)
 @RestController
 @RequestMapping("/api")
 public class BookController {
