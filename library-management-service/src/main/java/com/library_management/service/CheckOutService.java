@@ -8,6 +8,7 @@ import com.library_management.entity.CheckOut;
 public interface CheckOutService {
 	List<CheckOut> getAllCheckOuts();
 	CheckOut getCheckOut(UUID id);
+	CheckOut updateCheckOut(CheckOut checkOut);
 	CheckOut addCheckOut(CheckOut checkOut);
-	void deleteCheckOut(UUID id);
+	String deleteCheckOut(CheckOut checkOut);
 }
