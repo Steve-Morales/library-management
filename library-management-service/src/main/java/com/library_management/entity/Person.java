@@ -2,6 +2,8 @@ package com.library_management.entity;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,11 +20,15 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Person {
 	
+	@JsonProperty("personID")
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID personID;
+	@JsonProperty("name")
 	private String name;
+	@JsonProperty("address")
 	private String address;
+	@JsonProperty("phoneNumber")
 	private String phoneNumber;
 	
     @Override
